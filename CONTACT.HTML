@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gorkha Liner | Contact</title>
+
+<style>
+:root{
+    --dark:#172018;
+    --green:#2f5d3a;
+    --green-dark:#1f4529;
+    --light-green:#eaf1e9;
+    --cream:#f7f8f4;
+    --white:#ffffff;
+    --text:#273028;
+    --muted:#69716a;
+    --border:#dfe5de;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--text);
+}
+
+/* NAVBAR */
+.navbar{
+    height:76px;
+    background:white;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo img{
+    width:145px;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+    font-size:15px;
+    font-weight:600;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:var(--green);
+}
+
+.enquiry-btn{
+    background:var(--green);
+    color:white !important;
+    padding:12px 20px;
+    border-radius:7px;
+}
+
+.enquiry-btn:hover{
+    background:var(--green-dark) !important;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:400px;
+    background:
+        linear-gradient(rgba(23,32,24,.78),rgba(23,32,24,.78)),
+        url("bg.png") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+    color:white;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:8px 17px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    color:#e4ebe5;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+    padding:75px 6%;
+}
+
+.contact-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:35px;
+}
+
+/* LEFT */
+.contact-info{
+    background:var(--dark);
+    color:white;
+    padding:40px;
+    border-radius:16px;
+}
+
+.contact-info h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.contact-info > p{
+    color:#c6d0c8;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    display:flex;
+    gap:16px;
+    margin-bottom:25px;
+}
+
+.contact-icon{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    background:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.contact-item h4{
+    margin-bottom:5px;
+}
+
+.contact-item p,
+.contact-item a{
+    color:#bfc9c1;
+    text-decoration:none;
+    line-height:1.5;
+    font-size:14px;
+}
+
+.contact-item a:hover{
+    color:white;
+}
+
+/* SOCIAL MEDIA ITEMS */
+.social-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:25px;
+}
+
+.social-icon{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    background:var(--green);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.social-item h4{
+    margin-bottom:5px;
+}
+
+.social-item a{
+    color:#bfc9c1;
+    text-decoration:none;
+    line-height:1.5;
+    font-size:14px;
+}
+
+.social-item a:hover{
+    color:white;
+}
+
+/* FORM */
+.contact-form{
+    background:white;
+    padding:40px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:0 12px 35px rgba(23,32,24,.06);
+}
+
+.contact-form h2{
+    font-size:30px;
+    color:var(--dark);
+    margin-bottom:8px;
+}
+
+.form-subtitle{
+    color:var(--muted);
+    margin-bottom:28px;
+    line-height:1.6;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--border);
+    border-radius:7px;
+    background:#fbfcfa;
+    color:var(--text);
+    font-family:inherit;
+    font-size:14px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--green);
+}
+
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    background:var(--green);
+    color:white;
+    padding:15px;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.submit-btn:hover{
+    background:var(--green-dark);
+}
+
+.submit-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+/* FORM STATUS */
+.form-status{
+    display:none;
+    margin-top:15px;
+    padding:12px 14px;
+    border-radius:7px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.form-status.success{
+    display:block;
+    background:#e8f5e9;
+    color:#246b32;
+    border:1px solid #b9ddc0;
+}
+
+.form-status.error{
+    display:block;
+    background:#fcebea;
+    color:#a33a32;
+    border:1px solid #efb8b3;
+}
+
+/* QUICK CONTACT */
+.quick-section{
+    padding:0 6% 75px;
+}
+
+.quick-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.quick-card{
+    background:white;
+    border:1px solid var(--border);
+    padding:25px 18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.quick-card .icon{
+    font-size:30px;
+    margin-bottom:14px;
+}
+
+.quick-card h3{
+    margin-bottom:8px;
+    color:var(--dark);
+    font-size:18px;
+}
+
+.quick-card p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.quick-card a{
+    color:var(--green);
+    text-decoration:none;
+    font-weight:700;
+    font-size:13px;
+}
+
+/* CTA */
+.cta{
+    margin:0 6% 70px;
+    padding:55px 30px;
+    background:var(--green);
+    border-radius:18px;
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#e3ebe5;
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    padding:13px 25px;
+    background:white;
+    color:var(--green);
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* FOOTER */
+footer{
+    background:var(--dark);
+    color:white;
+    padding:45px 6% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:30px;
+}
+
+footer p{
+    color:#b8c2ba;
+    line-height:1.7;
+    font-size:14px;
+}
+
+footer h4{
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+    color:#b8c2ba;
+    text-decoration:none;
+    margin-bottom:9px;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:20px;
+    text-align:center;
+    color:#9da89f;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:55px;
+    height:55px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    box-shadow:0 6px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+    .quick-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:25px;
+        gap:20px;
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+}
+
+@media(max-width:550px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .logo img{
+        width:125px;
+    }
+
+    .hero{
+        min-height:330px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .contact-section{
+        padding:50px 20px;
+    }
+
+    .contact-info,
+    .contact-form{
+        padding:28px 22px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .quick-section{
+        padding:0 20px 55px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        margin-left:20px;
+        margin-right:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <img src="CORRECTLOGO.png" alt="Gorkha Liner">
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="index.html">Home</a>
+
+        <a href="product.html">Product</a>
+
+        <a href="brochure.html">Brochure</a>
+
+        <a href="contact.html" class="active enquiry-btn">
+            Get Enquiry
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">GORKHA LINER</span>
+
+        <h1>Let's Talk About Your Project</h1>
+
+        <p>
+            Have a pond, reservoir or water-storage requirement?
+            Send us your enquiry and our team will get in touch.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+    <div class="contact-grid">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+
+            <h2>Get In Touch</h2>
+
+            <p>
+                Connect with Gorkha Liner for product information,
+                project enquiries and business requirements.
+            </p>
+
+
+            <!-- EMAIL -->
+            <div class="contact-item">
+
+                <div class="contact-icon">✉</div>
+
+                <div>
+                    <h4>Email</h4>
+
+                    <a href="mailto:info@gorkhaliner.com">
+                        info@gorkhaliner.com
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="contact-item">
+
+                <div class="contact-icon">☎</div>
+
+                <div>
+                    <h4>Phone</h4>
+
+                    <a href="tel:+918511897500">
+                        +91 8511897500
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+            <div class="contact-item">
+
+                <div class="contact-icon">◎</div>
+
+                <div>
+                    <h4>Instagram</h4>
+
+                    <a
+                        href="https://www.instagram.com/gorkha_liner_2026/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        @gorkha_liner_2026
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- FACEBOOK -->
+            <div class="social-item">
+
+                <div class="social-icon">f</div>
+
+                <div>
+                    <h4>Facebook</h4>
+
+                    <a
+                        href="https://www.facebook.com/share/1HX1UERSkp/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Gorkha Liner
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- YOUTUBE -->
+            <div class="social-item">
+
+                <div class="social-icon">▶</div>
+
+                <div>
+                    <h4>YouTube</h4>
+
+                    <a
+                        href="https://youtube.com/@gorkhaliner?si=Fat3gOElNS4BPJEw"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Gorkha Liner
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENQUIRY FORM -->
+        <div class="contact-form">
+
+            <h2>Send an Enquiry</h2>
+
+            <p class="form-subtitle">
+                Fill in your details and tell us about your requirement.
+            </p>
+
+            <form id="enquiryForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Name"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">Phone</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="Phone"
+                            placeholder="Your phone number"
+                            autocomplete="tel"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="Your email address"
+                        autocomplete="email">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="requirement">Requirement</label>
+
+                    <select
+                        id="requirement"
+                        name="Requirement">
+
+                        <option value="">
+                            Select requirement
+                        </option>
+
+                        <option value="Agricultural Pond">
+                            Agricultural Pond
+                        </option>
+
+                        <option value="Water Reservoir">
+                            Water Reservoir
+                        </option>
+
+                        <option value="Irrigation Water Storage">
+                            Irrigation Water Storage
+                        </option>
+
+                        <option value="Rainwater Harvesting">
+                            Rainwater Harvesting
+                        </option>
+
+                        <option value="Aquaculture">
+                            Aquaculture
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="Message"
+                        placeholder="Tell us about your project or requirement"></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Send Enquiry
+
+                </button>
+
+                <div
+                    id="formStatus"
+                    class="form-status"
+                    role="alert">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK CONTACT -->
+<section class="quick-section">
+
+    <div class="quick-grid">
+
+        <!-- EMAIL -->
+        <div class="quick-card">
+
+            <div class="icon">✉️</div>
+
+            <h3>Email Us</h3>
+
+            <p>
+                Send your requirement directly to our team.
+            </p>
+
+            <a href="mailto:info@gorkhaliner.com">
+                Email Now →
+            </a>
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="quick-card">
+
+            <div class="icon">📞</div>
+
+            <h3>Call Us</h3>
+
+            <p>
+                Speak directly with the Gorkha Liner team.
+            </p>
+
+            <a href="tel:+918511897500">
+                Call Now →
+            </a>
+
+        </div>
+
+
+        <!-- INSTAGRAM -->
+        <div class="quick-card">
+
+            <div class="icon">📱</div>
+
+            <h3>Instagram</h3>
+
+            <p>
+                Follow Gorkha Liner for updates and projects.
+            </p>
+
+            <a
+                href="https://www.instagram.com/gorkha_liner_2026/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit Instagram →
+            </a>
+
+        </div>
+
+
+        <!-- FACEBOOK -->
+        <div class="quick-card">
+
+            <div class="icon">f</div>
+
+            <h3>Facebook</h3>
+
+            <p>
+                Follow Gorkha Liner on Facebook.
+            </p>
+
+            <a
+                href="https://www.facebook.com/share/1HX1UERSkp/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit Facebook →
+            </a>
+
+        </div>
+
+
+        <!-- YOUTUBE -->
+        <div class="quick-card">
+
+            <div class="icon">▶</div>
+
+            <h3>YouTube</h3>
+
+            <p>
+                Watch Gorkha Liner videos and updates.
+            </p>
+
+            <a
+                href="https://youtube.com/@gorkhaliner?si=Fat3gOElNS4BPJEw"
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit YouTube →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Looking for the Right Liner Solution?</h2>
+
+    <p>
+        Share your project requirements with Gorkha Liner.
+    </p>
+
+    <a href="mailto:info@gorkhaliner.com">
+        Email Us
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <p>
+                Engineered solutions for water containment,
+                conservation and storage.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="brochure.html">Brochure</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <a href="mailto:info@gorkhaliner.com">
+                info@gorkhaliner.com
+            </a>
+
+            <a href="tel:+918511897500">
+                +91 8511897500
+            </a>
+
+            <a
+                href="https://www.instagram.com/gorkha_liner_2026/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a
+                href="https://www.facebook.com/share/1HX1UERSkp/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Facebook
+            </a>
+
+            <a
+                href="https://youtube.com/@gorkhaliner?si=Fat3gOElNS4BPJEw"
+                target="_blank"
+                rel="noopener noreferrer">
+                YouTube
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 GORKHA LINER. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    class="whatsapp"
+    href="https://wa.me/918511897500"
+    target="_blank"
+    aria-label="WhatsApp">
+
+    ✆
+
+</a>
+
+
+<script>
+
+/* MOBILE MENU */
+function toggleMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("show");
+
+}
+
+
+/* ENQUIRY FORM → C# ASP.NET API */
+const enquiryForm = document.getElementById("enquiryForm");
+
+enquiryForm.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const submitButton =
+        enquiryForm.querySelector(".submit-btn");
+
+    const formStatus =
+        document.getElementById("formStatus");
+
+    submitButton.disabled = true;
+
+    submitButton.textContent = "Sending...";
+
+    formStatus.className = "form-status";
+
+    formStatus.textContent = "";
+
+
+    const formData =
+        new FormData(enquiryForm);
+
+
+    const enquiry = {
+
+        name: formData.get("Name"),
+
+        phone: formData.get("Phone"),
+
+        email: formData.get("Email"),
+
+        requirement: formData.get("Requirement"),
+
+        message: formData.get("Message")
+
+    };
+
+
+    try{
+
+        const response = await fetch(
+
+            "http://localhost:5062/api/Enquiries",
+
+            {
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify(enquiry)
+
+            }
+
+        );
+
+
+        const result =
+            await response.json();
+
+
+        if(response.ok){
+
+            formStatus.className =
+                "form-status success";
+
+            formStatus.textContent =
+                "✓ Thank you! Your enquiry has been submitted successfully.";
+
+            enquiryForm.reset();
+
+        }
+
+        else{
+
+            formStatus.className =
+                "form-status error";
+
+            formStatus.textContent =
+                "Unable to submit your enquiry. Please check your details.";
+
+            console.error(result);
+
+        }
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        formStatus.className =
+            "form-status error";
+
+        formStatus.textContent =
+            "Server connection failed. Please make sure the Gorkha Liner backend is running.";
+
+    }
+
+    finally{
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+            "Send Enquiry";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
